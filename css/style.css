@@ -1,0 +1,22 @@
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: black!important;
+}
+
+p {
+    text-transform: capitalize;
+}
+
+img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 50px!important;
+}
