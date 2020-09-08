@@ -20,3 +20,9 @@ input {
     padding: 10px;
     margin: 50px!important;
 }
+
+#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

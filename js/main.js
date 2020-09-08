@@ -1,5 +1,9 @@
 var user = document.getElementById('user');
+var loader = document.getElementById('spinner')
 
+
+
+loader.style.display = 'block'
 fetch("https://api.github.com/users/fool/repos")
     .then((response) => {
         return response.json();
@@ -30,10 +34,16 @@ fetch("https://api.github.com/users/fool/repos")
                     </div>
             </div>
             `
+            loader.style.display = 'none'
         })
+
     });
 
+
+
 user.addEventListener('blur', () => {
+    loader.style.display = 'block'
+
     document.getElementById('container').innerHTML = " "
     fetch("https://api.github.com/users/" + user.value + "/repos")
         .then((response) => {
@@ -65,8 +75,8 @@ user.addEventListener('blur', () => {
                     </div>
             </div>
             `
+                loader.style.display = 'none'
             })
         })
     document.getElementById('container').innerHTML = " "
-
 })
